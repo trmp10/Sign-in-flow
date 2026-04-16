@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../../node_modules/@finity/design-system/dist";
+@source "../../finity-design-system/src";
 
 :root {
   color-scheme: light;

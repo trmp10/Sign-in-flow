@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@finity/design-system";
 import Sidebar from "../components/Sidebar";
+import FinityLogo from "../components/FinityLogo";
 
 export default function WelcomePage() {
   return (
