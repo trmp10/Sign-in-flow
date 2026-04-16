@@ -8,7 +8,7 @@ import Sidebar from "../components/Sidebar";
 function PasswordDot({ met }: { met: boolean }) {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="8" cy="8" r="3" fill={met ? "#404040" : "#d4d4d4"} />
+      <circle cx="8" cy="8" r="4" fill={met ? "#737373" : "#D4D4D4"} />
     </svg>
   );
 }
@@ -36,7 +36,7 @@ function Toggle({ on, onToggle }: { on: boolean; onToggle: () => void }) {
     >
       <span
         className="absolute top-[3px] w-[18px] h-[18px] rounded-full bg-white shadow-sm transition-transform duration-200"
-        style={{ transform: on ? "translateX(23px)" : "translateX(3px)" }}
+        style={{ transform: on ? "translateX(3px)" : "translateX(23px)" }}
       />
     </button>
   );
@@ -145,9 +145,7 @@ export default function CreateAccountPage() {
                 <Toggle on={enable2FA} onToggle={() => setEnable2FA(!enable2FA)} />
               </div>
               <p className="text-[16px] font-normal leading-[22px] tracking-[0.48px] text-[#404040]">
-                {enable2FA
-                  ? "Two-factor authentication (2FA) adds an extra layer of security. Once enabled, you'll need to enter a code sent to your email when logging in."
-                  : "Two-factor authentication (2FA) adds an extra layer of security. Once enabled, you'll be required to provide an additional form of security verification when logging into the portal."}
+                Two-factor authentication (2FA) adds an extra layer of security. Once enabled, you&apos;ll be required to provide an additional form of security verification when logging into the portal.
               </p>
               {enable2FA && (
                 <div className="flex flex-col gap-2 pt-1">
