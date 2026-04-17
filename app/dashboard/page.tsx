@@ -30,7 +30,7 @@ export default function DashboardPage() {
 
         {/* Toast */}
         {showToast && (
-          <div className="absolute top-8 right-8 flex items-center gap-3 bg-[#F0FDF4] border border-[#BBF7D0] rounded-xl px-4 py-3 shadow-sm">
+          <div className="absolute top-8 right-8 flex items-center gap-3 bg-[#F0FDF4] rounded-xl px-4 py-3 shadow-sm">
             <SuccessIcon />
             <span className="text-sm font-medium text-black">
               Account created successfully
