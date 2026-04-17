@@ -3,23 +3,21 @@
 import { useState, useRef, useEffect } from "react";
 import { flushSync } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Button, TextField, Checkbox, PinCodeField } from "@finity/design-system";
+import { Button, TextField, Checkbox, PinCodeField, SuccessFilled } from "@finity/design-system";
 import Sidebar from "../components/Sidebar";
 import FinityLogo from "../components/FinityLogo";
-
-function PasswordDot({ met }: { met: boolean }) {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="8" cy="8" r="4" fill={met ? "#737373" : "#D4D4D4"} />
-    </svg>
-  );
-}
 
 function PasswordCriteria({ met, label }: { met: boolean; label: string }) {
   return (
     <div className="flex items-center gap-1">
-      <PasswordDot met={met} />
-      <span className="text-[14px] leading-[20px] tracking-[0.29px] text-[#737373] whitespace-nowrap">
+      {met ? (
+        <SuccessFilled size={16} color="var(--color-green-600)" />
+      ) : (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="4" fill="#D4D4D4" />
+        </svg>
+      )}
+      <span className={`text-[14px] leading-[20px] tracking-[0.29px] whitespace-nowrap ${met ? "text-[#171717]" : "text-[#737373]"}`}>
         {label}
       </span>
     </div>
@@ -116,6 +114,7 @@ export default function CreateAccountPage() {
                   }
                 }}
                 label="Set own username"
+                className="!items-center"
               />
             </div>
 

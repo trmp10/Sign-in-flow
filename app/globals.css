@@ -21,7 +21,12 @@
   --color-grey-900: #171717;
 
   /* Coral */
+  --color-coral-400: #F77445;
   --color-coral-finity: #FF885D;
+
+  /* Green */
+  --color-green-500: #22C55E;
+  --color-green-600: #16A34A;
 
   /* Red */
   --color-red-600: #DC2626;
