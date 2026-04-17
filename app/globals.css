@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./design-system.css";
 @source "../node_modules/@finity/design-system/src";
 
 :root {
